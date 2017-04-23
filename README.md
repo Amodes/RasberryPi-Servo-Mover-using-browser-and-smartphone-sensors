@@ -3,6 +3,7 @@
 <h2>Setup & Installation<h2>
 
 <h3>1. Raspberry Pi Configuration</h3>
+
 - Start Raspberry
 - create new folder with the files of the mover-folder
 - insert your personal data in settings.json . ```ip``` and ```port``` number of your mqtt broker. You can use a public one like the broker from hivemq (http://www.hivemq.com/demos/websocket-client/ and its port number 1883)  or you can use your own mqtt broker. In ```systemid``` you can insert any string. ```targetip``` is needed if you use the video livestream. Therefore you have to insert the ip adress of the hosting system of your webapplication.
@@ -17,9 +18,11 @@
 - Note IP-Adress
 
 <h3>3.On your smartphone: </h3>
+
 - Open Browser (tested with Google Chrome) in Smartphone
 - run index.html: type [Windows-IP-Adress]/mqtt (e.g. 192.168.2.30/mqtt)
 - Fill in BrokerIP and Port and Connect
+
 <h3> 4. Video Livestream (optional)</h3>
 
 - Just visible for Desktop Browser
