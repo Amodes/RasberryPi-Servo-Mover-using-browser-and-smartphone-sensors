@@ -1,33 +1,27 @@
-[This is the System Setup Part
-For SetupIntroduction see point 1]
+<h1> RasberryPi-Servo-Mover-using-browser-and-smartphone-sensors</h1>
 
-Setup Instructions:
+<h2>Setup & Installation<h2>
 
-1.Raspberry_____________________________________________________
-
+<h3>1. Raspberry Pi Configuration</h3>
 - Start Raspberry
-- Raspberry Terminal: 
-- insert mover folder
-- cd /[directory of mover]
-- insert your personal data in settings.json
+- create new folder with the files of the mover-folder
+- insert your personal data in settings.json . ```ip``` and ```port``` number of your mqtt broker. You can use a public one like the broker from hivemq (http://www.hivemq.com/demos/websocket-client/ and its port number 1883)  or you can use your own mqtt broker. In ```systemid``` you can insert any string. ```targetip``` is needed if you use the video livestream. Therefore you have to insert the ip adress of the hosting system of your webapplication.
 - sudo ./beforeStart.sh
 - sudo python start.py
-- for camera support ffmpeg has to be installed on the system
+- (for camera support ffmpeg has to be installed on the system (See 4. Video Livestream))
 
-2.Windows_______________________________________________________
+<h3> 2. Webapplication Configuration </h3>
 
-- Extract mqtt folder to xampp
-- Run Webserver (XAMPP Control Panel and start Apache Server)
+- Extract mqtt folder to your webserver directory
 - Open cmd.exe and type ipconfig
 - Note IP-Adress
 
-3.Navigation____________________________________________________
-
+<h3>3.On your smartphone: </h3>
 - Open Browser (tested with Google Chrome) in Smartphone
 - run index.html: type [Windows-IP-Adress]/mqtt (e.g. 192.168.2.30/mqtt)
 - Fill in BrokerIP and Port and Connect
+<h3> 4. Video Livestream (optional)</h3>
 
-4.Video Livestream______________________________________________
 - Just visible for Desktop Browser
 - Install node.js on Windows
 - Restart System and open cmd
@@ -42,10 +36,9 @@ Setup Instructions:
 - Press Livestream Button on Smartphone and you can see the stream 
   on your Desktop Browser
 
-5.Own Broker(opional)(hivemq Test broker)__________________________________
-- If you don't want a public mqtt broker like broker.mqttdashboard.com you can use
-your own hivemq broker (limit to 25 clients)
-- Go to mqttBroker -> hivemq-3.0.1 -> conf folder
+<h3>5.Own Broker(opional)(hivemq Test broker)</h3>
+- If you don't want a public mqtt broker like broker.mqttdashboard.com you can use your own hivemq broker (limit to 25 clients)
+- Download mqtt broker (http://www.hivemq.com/downloads/)
 - In the config.xml insert your ip between the the <tcp-listener> and <websocket-listener> tags
 - in the bin folder: run run.bat to start the broker
 - For the other configuration you can now use your Ip as the mqtt-broker address
