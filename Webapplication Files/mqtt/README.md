@@ -45,7 +45,6 @@ Setup Instructions:
 5.Own Broker(opional)(hivemq Test broker)__________________________________
 - If you don't want a public mqtt broker like broker.mqttdashboard.com you can use
 your own hivemq broker (limit to 25 clients)
-- Go to mqttBroker -> hivemq-3.0.1 -> conf folder
 - In the config.xml insert your ip between the the <tcp-listener> and <websocket-listener> tags
 - in the bin folder: run run.bat to start the broker
 - For the other configuration you can now use your Ip as the mqtt-broker address
