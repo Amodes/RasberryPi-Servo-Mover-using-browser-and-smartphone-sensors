@@ -1,4 +1,4 @@
-<h1> RasberryPi-Servo-Mover-using-browser-and-smartphone-sensors</h1>
+<h1> RaspberryPi-Servo-Mover-using-browser-and-smartphone-sensors</h1>
 
 <h2> Introduction </h2>
 
